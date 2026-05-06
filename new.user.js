@@ -23,7 +23,34 @@
 (function() {
 'use strict';console.log("🚀 哥哥科技 V5.8.8b 终极引擎已装载...");
 function eh(s){if(!s)return'';return String(s).replace(/[&<>'"]/g,function(m){return{'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m];});}
-const cfg={injectMode:1,calcMode:1,ratioExtremeUp:10,ratioWarnUp:0.07,ratioExtremeDown:0.01,ratioThreshold:7,readSaveData:1,portMap:{"eth1":"网口 1","eth2":"网口 2","eth3":"网口 3","eth4":"网口 4","wl0":"2.4G","wl1":"5.2G","wl2":"5.8G"}};
+
+
+
+    // ======== 环境变量配置区 ========
+    const cfg = {
+        injectMode: 1, // 【UI注入模式】 0: 原生侧边栏(1min)| 1: 优先，10秒悬浮舱(D)| 2: 强制模式(30秒后强制霸屏)
+
+        routerIP: "192.168.5.1", // 路由器内网 IP，用于防断线保活模块的后台寻址
+        calcMode: 1, // 1: 上行/下行倍数模式, 0: 上行占总和比例模式
+
+        calcMode: 1, // 1: 上行/下行倍数模式, 0: 上行占总和比例模式
+        ratioExtremeUp: 10,// 极端上传判定阈值 (> 1000%)
+        ratioWarnUp: 0.07,// 重度上传警告阈值 (> 7%)
+        ratioExtremeDown: 0.01, // 极端下载判定阈值 (< 1%)
+        ratioThreshold: 7, // (仅calcMode=0时有效) 上传占比报警阈值(%)
+        portMap: {
+            "eth1": "网口 1",
+            "eth2": "网口 2",
+            "eth3": "网口 3",
+            "eth4": "网口 4",
+            "wl0":  "2.4G",
+            "wl1":  "5.2G",
+            "wl2":  "5.8G"
+        }
+    };
+
+
+
 const st={lastTime:0,WAN瞬时上行:0,WAN瞬时下行:0,WAN总出站_上:0,WAN总入站_下:0,clients:{}};
 let f1=false;const pr=new DOMParser();let ltxt=null;const oo=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){this.addEventListener('load',function(){try{if(this.responseType===''||this.responseType==='text'){if(this.responseText&&this.responseText.includes('<OBJ_CLIENTS_ID>')){ltxt=this.responseText;}}}catch(e){}});oo.apply(this,arguments);};
 function s2b(s){if(!s)return 0;let m=s.match(/([\d.]+)\s*(G|M|K)?bps/i);if(!m)return 0;let v=parseFloat(m[1]);let u=(m[2]||"").toUpperCase();if(u==='G')return v*1000000000;if(u==='M')return v*1000000;if(u==='K')return v*1000;return v;}
