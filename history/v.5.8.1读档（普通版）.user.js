@@ -637,7 +637,7 @@
             });
 
             overlay.innerHTML = `
-                <div style="padding: 20px; max-width: 1200px; margin: 0 auto; min-height: 100%;">
+                <div style="padding: 20px; max-width: 1600px; margin: 0 auto; min-height: 100%;">
                     <div id="config-list" class="config-list gege-list-container">
                         <div class="gege-section">
                             <div class="config-title">无线设备（2.4GHz）</div>

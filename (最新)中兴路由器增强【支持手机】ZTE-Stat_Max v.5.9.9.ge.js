@@ -690,7 +690,7 @@ const calcStageRatio = (W, L_int, L_hp) => {
         else hW.push(htm);
       });
       requestAnimationFrame(() => {
-        ol.innerHTML = `<div style="padding: 20px; max-width: 1200px; margin: 0 auto; min-height: 100%;"><div id="gege-board-anchor"></div><div id="config-list" class="config-list gege-list-container"><div class="gege-section"><div class="config-title">有线设备${(window.gegeHiddenDevices && Object.keys(window.gegeHiddenDevices).length > 0) ? '<span style="color: #ff4c00; font-size: 13px; font-weight: normal; margin-left: 10px; font-family: Consolas;">(哥哥科技：智能Mesh适配)</span>' : ''}</div>${hW.join('')||'<div class="gege-empty-state">没有连接设备</div>'}</div><div class="gege-section"><div class="config-title">无线设备（${S.is5G_149?'5.8GHz':'5.2GHz'}）</div>${h52.join('')||'<div class="gege-empty-state">没有连接设备</div>'}</div><div class="gege-section"><div class="config-title">无线设备（${S.is5G_149?'5.2GHz':'5.8GHz'}）</div>${h58.join('')||'<div class="gege-empty-state">没有连接设备</div>'}</div><div class="gege-section"><div class="config-title">无线设备（2.4GHz）</div>${h2.join('')||'<div class="gege-empty-state">没有连接设备</div>'}
+        ol.innerHTML = `<div style="padding: 20px; max-width: 1500px; margin: 0 auto; min-height: 100%;"><div id="gege-board-anchor"></div><div id="config-list" class="config-list gege-list-container"><div class="gege-section"><div class="config-title">有线设备${(window.gegeHiddenDevices && Object.keys(window.gegeHiddenDevices).length > 0) ? '<span style="color: #ff4c00; font-size: 13px; font-weight: normal; margin-left: 10px; font-family: Consolas;">(哥哥科技：智能Mesh适配)</span>' : ''}</div>${hW.join('')||'<div class="gege-empty-state">没有连接设备</div>'}</div><div class="gege-section"><div class="config-title">无线设备（${S.is5G_149?'5.8GHz':'5.2GHz'}）</div>${h52.join('')||'<div class="gege-empty-state">没有连接设备</div>'}</div><div class="gege-section"><div class="config-title">无线设备（${S.is5G_149?'5.2GHz':'5.8GHz'}）</div>${h58.join('')||'<div class="gege-empty-state">没有连接设备</div>'}</div><div class="gege-section"><div class="config-title">无线设备（2.4GHz）</div>${h2.join('')||'<div class="gege-empty-state">没有连接设备</div>'}
         </div><div style="margin-top: 25px; padding-top: 15px; border-top: 1px dashed #eee; text-align: center; font-family: Consolas, 'Microsoft YaHei', sans-serif;"><div style="font-size: 11.5px; color: #777; font-style: italic; margin-bottom: 8px;">“在一个文明社会，干净的、不被监视与吸血的网络，是我们每个人的基本权利。”</div><div style="font-size: 10.5px; color: #999; line-height: 1.3; margin-bottom: 8px;">本交互式程序基于 GNU Affero GPL v3.0 协议开源，按“原样 (AS IS)”提供，不对其适用性、稳定性、精密度或任何商业场景合规性作任何明示或暗示的担保。<br>根据 AGPL-3.0 第 5(d) 及 7(b) 条规定，基于本程序的任何修改均不得移除或篡改本界面的署名与法律声明。保留此界面是使用本软件代码的合法性的前置条件。
         </div><div style="font-size: 12px; color: #555;"><a href="https://github.com/ucxn/ZTE-Stat_Max" target="_blank" style="color: #0059fa; text-decoration: none; font-weight: bold;">ZTE-Stat_Max 增强组件</a> Copyright &copy; 2026 <a href="https://www.bilibili.com/video/BV1yfEx6YEq7" target="_blank" style="color: #0059fa; text-decoration: none; font-weight: bold;">哥哥科技</a> (BroTech)<span style="color: #888; font-weight: normal;"> | All Rights Reserved</span>&emsp;&nbsp;<a href="https://scriptcat.org/zh-CN/script-show-page/6194" target="_blank" style="color: #666; text-decoration: none;">点此分享</a></div></div></div></div>`;
       });}
@@ -706,7 +706,7 @@ const calcStageRatio = (W, L_int, L_hp) => {
       document.createElement('div');
     b.id = 'gege-floating-btn';
     b.innerHTML = '🛸';
-    b.style.cssText = `position: fixed; ${CONFIG.injectMode === 3 ? 'bottom: 60px; right: 60px;' : 'top: 20px; right: 21%;'} width: 50px; height: 50px; background: linear-gradient(135deg, #0059fa, #00c6ff); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 48px; box-shadow: 0 4px 15px rgba(0,89,250,0.5); cursor: pointer; z-index: 99999; transition: transform 0.3s ease; user-select: none;`;
+    b.style.cssText = `position: fixed; ${CONFIG.injectMode === 3 ? 'bottom: 60px; right: 60px;' : 'top: 10px; right: 16%;'} width: 50px; height: 50px; background: linear-gradient(135deg, #0059fa, #00c6ff); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 48px; box-shadow: 0 4px 15px rgba(0,89,250,0.5); cursor: pointer; z-index: 99999; transition: transform 0.3s ease; user-select: none;`;
     b.
     onmouseover = () => {
       b.style.transform = 'scale(1.1) rotate(15deg)';
@@ -764,12 +764,14 @@ const calcStageRatio = (W, L_int, L_hp) => {
         window.gegePortTimer = setInterval(fPP, CONFIG.portInterval * 1000);
         fPP();
       }
-      fetch(`/?_type=vueData&_tag=wlanConfig_data&_=${Date.now()}`).then(r=>r.text()).then(t=>{
-        let x=pr.parseFromString(t,"text/xml");
-        x.querySelectorAll("OBJ_WLANCONFIG_ID Instance").forEach(i=>{
-          let d=pI(i); if(d.Standard?.includes('ac') && d.Channel) { let c=parseInt(d.Channel); if(c>=149 && c<=165) S.is5G_149=!0; }
-        });
-      }).catch(e=>{console.warn(e)});
+      fetch(`/?_type=vueData&_tag=wlanConfig_data&_=${Date.now()}`)
+      .then(r => r.text())
+      .then(t => {
+      if (!S.is5G_149 && /<ParaName>ChannelInUsed<\/ParaName><ParaValue>(149|1[5-9]\d)<\/ParaValue>/.test(t)) {
+            S.is5G_149 = !0;
+            document.getElementById('gege-global-overlay')?.style.display === 'block' && 
+            bVD(document.getElementById('gege-global-overlay'), lCxt ? pr.parseFromString(lCxt, "text/xml") : null);
+        }}).catch(e => {console.warn("[哥哥科技] 5.8G彩蛋探测异常:", e);});
       if (CONFIG.forceMeshMode === 1) {
         setTimeout(() => {
           if (window.gegeRenderedMacs.size === 0) {

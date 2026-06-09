@@ -163,7 +163,7 @@ let pu=sU>0?(cC.upRate/sU*100):0,pd=sD>0?(cC.dnRate/sD*100):0,bU=enh.querySelect
         htm;}else if(['wlan5','wl4','wlan4','wl3','wlan3'].includes(ifc)){h52+=
         htm;}else if(ifc==='wl2'||ifc==='wlan2'||ifc==='wl5'||(/w/i.test(ifc)&&!/wan/i.test(ifc))){h58+=
         htm;}else{hW+=htm;}});requestAnimationFrame(()=>{ol.innerHTML=`<div `+
-        `style="padding: 20px; max-width: 1200px; margin: 0 auto; min-height: 100%;"><div id="gege-board-anchor"></div><div id="config-list" class="config-list gege-list-container"><div `+
+        `style="padding: 20px; max-width: 1500px; margin: 0 auto; min-height: 100%;"><div id="gege-board-anchor"></div><div id="config-list" class="config-list gege-list-container"><div `+
         `class="gege-section"><div class="config-title">无线设备（2.4GHz）</div>${h2||'<div class="gege-empty-state">没有连接设备</div>'}</div><div `+
         `class="gege-section"><div class="config-title">无线设备（5.2GHz）</div>${h52||'<div class="gege-empty-state">没有连接设备</div>'}</div><div `+
         `class="gege-section"><div class="config-title">无线设备（5.8GHz）</div>${h58||'<div class="gege-empty-state">没有连接设备</div>'}</div><div `+
