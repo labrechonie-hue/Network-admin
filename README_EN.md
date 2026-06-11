@@ -10,6 +10,15 @@
 
 **ZTE-Stat_Max** (Author:*Brother Tech*/*哥哥科技*) is a Xmonkey enhancement script specifically designed for the ZTE router Web UI management dashboard, now coupled with a dedicated **Home Assistant integration** for smart home automation.
 
+**Real-time Monitoring**: WAN port speed, individual physical ports (including LAN speeds at 1s precision), per-device speeds (2/3/5s intervals), and official per-device traffic subtotals.
+**Dual-WAN Support**: Fully supported! Independently tracks WAN1/WAN2 speeds with calculus-based integration (∫Sum), automatically calculates the *Primary/Secondary Load Ratio*, and cross-references with high-precision LAN and device statistics.
+**Advanced Calculus**: Total WAN traffic and per-device traffic (via integration) displayed in a dual-track comparison alongside official hardware stats (equipped with an anti 0-rollback/reset shield)!
+**Data Scopes**: Simultaneously compares: Official hardware readings (current session only), real-time online data, and cumulative totals since page load.
+**Core Features**: WAN/LAN Ratio via tri-source smart arbitration; Dual-WAN Primary/Secondary Load Ratio; Event-driven traffic integration; Physical port statistics; and Smart unit conversion/standardization.
+**Dashboard UI**: Displays device name, uptime, IPv4, and connected interface. Features high-precision Up/Down speeds and ratios (dual-color indicators), historical upload / current download ratios against total network traffic (independent red/blue progress bars), and dynamic speed bars.
+
+![Preview](./assets/new.png)
+
 ### [Quick Install OnLine (Click)](https://github.com/ucxn/ZTE-Stat_Max/blob/main/README_EN.md#-installation-guide)&nbsp;&emsp;&nbsp;[![Bilibili](https://img.shields.io/badge/Bilibili-VIDEO-FF8EB3?style=for-the-badge&logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV1PtR7B8ECC)
 
 By taking over the underlying XML API data stream of the native Vue framework, this script reconstructs the UI layout of the "Network Management" and "Connected Devices" pages without breaking the official topology and structure. It introduces trapezoidal integration algorithms, an abnormal traffic radar, and a dual-track traffic alignment display, providing an dashboard for network engineers and power users.

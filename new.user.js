@@ -303,20 +303,9 @@
       }
       for (const [m, cC] of Object.entries(cI)) {
         S.cls[m] ??= {
-          upR: cC.upRate,
-          dnR: cC.dnRate,
-          lUT: n,
-          intUp: 0,
-          intDn: 0,
-          uB: CONFIG.readSaveData === 1 ? 0 : cC.offUp,
-          dB: CONFIG.readSaveData === 1 ? 0 : cC.offDn,
-          lU: cC.offUp,
-          lD: cC.offDn,
-          aR: !1,
-          dpU: 0,
-          dpD: 0,
-          oU: CONFIG.readSaveData === 1 ? cC.offUp : 0,
-          oD: CONFIG.readSaveData === 1 ? cC.offDn : 0
+          upR: cC.upRate, dnR: cC.dnRate, lUT: n, intUp: 0, intDn: 0,
+          uB: CONFIG.readSaveData === 1 ? 0 : cC.offUp, dB: CONFIG.readSaveData === 1 ? 0 : cC.offDn,
+          lU: cC.offUp, lD: cC.offDn, aR: !1, dpU: 0, dpD: 0
         };
         let cS = S.cls[m],
           dU = cC.offUp - cS.lU,
@@ -399,8 +388,8 @@ const calcStageRatio = (W, L_int, L_hp) => {
       cln = {};
     for (const [k, s] of Object.entries(S.cls)) {
       let cC = cI[k],
-        cU = Math.max(0, (s.lU || 0) - (s.uB || 0) - (s.oU || 0)),
-        cD = Math.max(0, (s.lD || 0) - (s.dB || 0) - (s.oD || 0));
+        cU = Math.max(0, (s.lU || 0) - (s.uB || 0)),
+        cD = Math.max(0, (s.lD || 0) - (s.dB || 0));
       LUp += s.intUp || 0;
       LDn += s.intDn || 0;
       hpU += cU;
@@ -503,6 +492,7 @@ const calcStageRatio = (W, L_int, L_hp) => {
       let mn = document.querySelector('.el-table') || document.querySelector('.config-item')?.closest('div') || document.querySelector('.main-content');
       if (mn && bd.parentNode !== mn.parentNode) mn.parentNode.insertBefore(bd, mn);
     }
+    requestAnimationFrame(() => {
     let oDC = Object.create(null);
     if (!iPO) {
       const M_RX = /([a-fA-F0-9]{2}[:-]){5}[a-fA-F0-9]{2}/;
@@ -522,7 +512,6 @@ const calcStageRatio = (W, L_int, L_hp) => {
         if (m) oDC[m] = n;
       }
     }
-    requestAnimationFrame(() => {
       if (bd.parentNode) {
         let aW2U = S.hasW2 ? S.w2U : (CONFIG.lanPortMode === 1 ? Phys.wU : undefined), aW2D = S.hasW2 ? S.w2D : (CONFIG.lanPortMode === 1 ? Phys.wD : undefined), aW2TU = S.hasW2 ? S.w2TotUp : (CONFIG.lanPortMode === 1 ? Phys.tU : undefined), aW2TD = S.hasW2 ? S.w2TotDn : (CONFIG.lanPortMode === 1 ? Phys.tD : undefined);
         bd.querySelector('#gb-wan-up-bytes').textContent = `🔼 ${fBy(wU + (aW2U||0))}`;

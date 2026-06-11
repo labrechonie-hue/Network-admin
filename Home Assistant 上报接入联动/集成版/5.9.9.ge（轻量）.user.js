@@ -290,20 +290,9 @@
       }
       for (const [m, cC] of Object.entries(cI)) {
         S.cls[m] ??= {
-          upR: cC.upRate,
-          dnR: cC.dnRate,
-          lUT: n,
-          intUp: 0,
-          intDn: 0,
-          uB: CONFIG.readSaveData === 1 ? 0 : cC.offUp,
-          dB: CONFIG.readSaveData === 1 ? 0 : cC.offDn,
-          lU: cC.offUp,
-          lD: cC.offDn,
-          aR: !1,
-          dpU: 0,
-          dpD: 0,
-          oU: CONFIG.readSaveData === 1 ? cC.offUp : 0,
-          oD: CONFIG.readSaveData === 1 ? cC.offDn : 0
+          upR: cC.upRate, dnR: cC.dnRate, lUT: n, intUp: 0, intDn: 0,
+          uB: CONFIG.readSaveData === 1 ? 0 : cC.offUp, dB: CONFIG.readSaveData === 1 ? 0 : cC.offDn,
+          lU: cC.offUp, lD: cC.offDn, aR: !1, dpU: 0, dpD: 0
         };
         let cS = S.cls[m],
           dU = cC.offUp - cS.lU,
@@ -386,8 +375,8 @@ const calcStageRatio = (W, L_int, L_hp) => {
       cln = {};
     for (const [k, s] of Object.entries(S.cls)) {
       let cC = cI[k],
-        cU = Math.max(0, (s.lU || 0) - (s.uB || 0) - (s.oU || 0)),
-        cD = Math.max(0, (s.lD || 0) - (s.dB || 0) - (s.oD || 0));
+        cU = Math.max(0, (s.lU || 0) - (s.uB || 0)),
+        cD = Math.max(0, (s.lD || 0) - (s.dB || 0));
       LUp += s.intUp || 0;
       LDn += s.intDn || 0;
       hpU += cU;
@@ -473,6 +462,7 @@ const calcStageRatio = (W, L_int, L_hp) => {
             };
         }
     }
+    requestAnimationFrame(() => {
     let ol = document.getElementById('gege-global-overlay'),
       iPO = ol && ol.style.display === 'block',
       aC = iPO ? ol : document;
@@ -484,7 +474,6 @@ const calcStageRatio = (W, L_int, L_hp) => {
       let mn = document.querySelector('.el-table') || document.querySelector('.config-item')?.closest('div') || document.querySelector('.main-content');
       if (mn && bd.parentNode !== mn.parentNode) mn.parentNode.insertBefore(bd, mn);
     }
-    requestAnimationFrame(() => {
     let oDC = Object.create(null);
     if (!iPO) {
       const M_RX = /([a-fA-F0-9]{2}[:-]){5}[a-fA-F0-9]{2}/;
