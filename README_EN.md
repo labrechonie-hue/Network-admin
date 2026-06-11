@@ -1,7 +1,7 @@
 # ZTE-Stat_Max by Brother Tech
 
 [![Version](https://img.shields.io/badge/version-5.9.9.ge-orange.svg?logo=github&logoColor=white)](https://github.com/ucxn/ZTE-Stat_Max)&emsp;&nbsp;
-[![License: AGPL 3.0](https://img.shields.io/badge/License-AGPL_3.0-blue.svg?logo=gnu&logoColor=white)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![License: AGPL 3.0](https://img.shields.io/badge/License-AGPL_3.0-blue.svg?logo=gnu&logoColor=white)](https://www.gnu.org/licenses/agpl-3.0.html)
 
 [![Platform](https://img.shields.io/badge/platform-Web--JS-green.svg?logo=javascript&logoColor=white)](https://scriptcat.org/zh-CN)&nbsp;&emsp;
 [![Integration](https://img.shields.io/badge/Integration-Home_Assistant-41BDF5.svg?logo=homeassistant&logoColor=white)](https://github.com/ucxn/ZTE-Stat_HA)
@@ -10,16 +10,18 @@
 
 **ZTE-Stat_Max** (Author:*Brother Tech*/*哥哥科技*) is a Xmonkey enhancement script specifically designed for the ZTE router Web UI management dashboard, now coupled with a dedicated **Home Assistant integration** for smart home automation.
 
-**Real-time Monitoring**: WAN port speed, individual physical ports (including LAN speeds at 1s precision), per-device speeds (2/3/5s intervals), and official per-device traffic subtotals.
-**Dual-WAN Support**: Fully supported! Independently tracks WAN1/WAN2 speeds with calculus-based integration (∫Sum), automatically calculates the *Primary/Secondary Load Ratio*, and cross-references with high-precision LAN and device statistics.
-**Advanced Calculus**: Total WAN traffic and per-device traffic (via integration) displayed in a dual-track comparison alongside official hardware stats (equipped with an anti 0-rollback/reset shield)!
-**Data Scopes**: Simultaneously compares: Official hardware readings (current session only), real-time online data, and cumulative totals since page load.
-**Core Features**: WAN/LAN Ratio via tri-source smart arbitration; Dual-WAN Primary/Secondary Load Ratio; Event-driven traffic integration; Physical port statistics; and Smart unit conversion/standardization.
+**Real-time Monitoring**: WAN port speed, individual physical ports (including LAN speeds at 1s precision), per-device speeds (2/3/5s intervals), and official per-device traffic subtotals.</br>
+**Dual-WAN Support**: Fully supported! Independently tracks WAN1/WAN2 speeds with calculus-based integration (∫Sum), automatically calculates the *Primary/Secondary Load Ratio*, and cross-references with high-precision LAN and device statistics.</br>
+**Advanced Calculus**: Total WAN traffic and per-device traffic (via integration) displayed in a dual-track comparison alongside official hardware stats (equipped with an anti 0-rollback/reset shield)!</br>
+**Data Scopes**: Simultaneously compares: Official hardware readings (current session only), real-time online data, and cumulative totals since page load.</br>
+**Core Features**: WAN/LAN Ratio via tri-source smart arbitration; Dual-WAN Primary/Secondary Load Ratio; Event-driven traffic integration; Physical port statistics; and Smart unit conversion/standardization.</br>
 **Dashboard UI**: Displays device name, uptime, IPv4, and connected interface. Features high-precision Up/Down speeds and ratios (dual-color indicators), historical upload / current download ratios against total network traffic (independent red/blue progress bars), and dynamic speed bars.
 
 ![Preview](./assets/new.png)
 
 ### [Quick Install OnLine (Click)](https://github.com/ucxn/ZTE-Stat_Max/blob/main/README_EN.md#-installation-guide)&nbsp;&emsp;&nbsp;[![Bilibili](https://img.shields.io/badge/Bilibili-VIDEO-FF8EB3?style=for-the-badge&logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV1PtR7B8ECC)
+
+![logo](./Home%20Assistant%20上报接入联动/集成版/gbnpa_router/brand/logo.png)
 
 By taking over the underlying XML API data stream of the native Vue framework, this script reconstructs the UI layout of the "Network Management" and "Connected Devices" pages without breaking the official topology and structure. It introduces trapezoidal integration algorithms, an abnormal traffic radar, and a dual-track traffic alignment display, providing an dashboard for network engineers and power users.
 
@@ -139,3 +141,4 @@ Utilizing the Tampermonkey environment, the script makes concurrent requests to 
 
 ---
 *Authored by Brother Tech*
+[![Star History](https://api.star-history.com/svg?repos=ucxn/ZTE-Stat_Max&type=Date)](https://star-history.com/#ucxn/ZTE-Stat_Max&Date)

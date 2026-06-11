@@ -1,7 +1,7 @@
 # ZTE-Stat_Max by 哥哥科技
 
 [![Version](https://img.shields.io/badge/version-5.9.9.Ge-orange.svg?logo=github&logoColor=white)](https://github.com/ucxn/ZTE-Stat_Max)&emsp;&nbsp;
-[![License: AGPL 3.0](https://img.shields.io/badge/License-AGPL_3.0-blue.svg?logo=gnu&logoColor=white)](https://www.gnu.org/licenses/gpl-3.0.html)&nbsp;&emsp;
+[![License: AGPL 3.0](https://img.shields.io/badge/License-AGPL_3.0-blue.svg?logo=gnu&logoColor=white)](https://www.gnu.org/licenses/agpl-3.0.html)&nbsp;&emsp;
 [![Platform](https://img.shields.io/badge/platform-Web-green.svg?logo=javascript&logoColor=white)](https://scriptcat.org/zh-CN)&nbsp;&emsp;
 [![Integration](https://img.shields.io/badge/集成-Home_Assistant-41BDF5.svg?logo=homeassistant&logoColor=white)](https://github.com/ucxn/ZTE-Stat_HA)
 
@@ -9,11 +9,11 @@
 
 **ZTE-Stat_Max**是一款专为中兴路由器 Web 管理后台设计的 “油猴” 增强脚本插件 + HA 全屋智能家居接入集成，作者：*哥哥科技* ！
 
-**支持检测**：WAN口速率、每个物理端口：含LAN口速率（精度1s）、各设备速率（2/3/5s）、各设备官方流量小计。
-**双WAN支持**：完全支持！可以统计WAN1/2网速，分别积分∫Sum，自动计算*主次网比*，和内网、设备高精统计对比。
-**支持计算**：WAN口总流量、各设备流量（积分）+官方统计（防0回流）双轨制对比！
-**统计口径**：同时支持对比：官方值（只含本次接入）、当前在线、网页打开以来的总计
-**特色功能**：内外网比，3数据源综合裁决；双WAN 主次网 1/2比值；事件驱动流量计算；端口统计；单位换算&统一。
+**支持检测**：WAN口速率、每个物理端口：含LAN口速率（精度1s）、各设备速率（2/3/5s）、各设备官方流量小计。</br>
+**双WAN支持**：完全支持！可以统计WAN1/2网速，分别积分∫Sum，自动计算*主次网比*，和内网、设备高精统计对比。</br>
+**支持计算**：WAN口总流量、各设备流量（积分）+官方统计（防0回流）双轨制对比！</br>
+**统计口径**：同时支持对比：官方值（只含本次接入）、当前在线、网页打开以来的总计。</br>
+**特色功能**：内外网比，3数据源综合裁决；双WAN 主次网 1/2比值；事件驱动流量计算；端口统计；单位换算&统一。</br>
 **视觉UI**：含设备名、在线时间、IPv4、接入端口，高精上下行和比例（双色雷达），历史上行、本次下行占全家比例（独立红蓝进度条），网速赛跑条。
 
 ![预览](./assets/new.png)
@@ -21,6 +21,8 @@
 本程序通过接管原生 Vue 框架的底层 XML API 数据流，在不破坏官方原有拓扑与结构的前提下，重构了“组网管理”与“接入设备”页面的 UI 布局。引入了梯形积分算法、异常流量雷达以及双轨制流量对齐显示，为网络工程人员和进阶玩家提供。
 
 路由器Web UI增强 × 智能家居平台联动接入（作者：哥哥科技），Home Assistant 插件集成、UI增强，中兴伴侣，支持全系ZTE！统计流量，查看占比速率、上下行比值，打击P2P偷上行，支持1000/1024进制，支持Mbps/GiB，可统计内网和公网作对比！设备列表平铺化，大屏可视化一点通，你所要的，都在这里，无需频繁切换页面…
+
+![logo](./Home%20Assistant%20上报接入联动/集成版/gbnpa_router/brand/logo.png)
 
 ## [点击一键安装](https://github.com/ucxn/ZTE-Stat_Max#%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85)&emsp;&nbsp;&emsp;[![Bilibili](https://img.shields.io/badge/Bilibili-观看演示视频-FF8EB3?style=for-the-badge&logo=bilibili&logoColor=white)](https://www.bilibili.com/video/BV1PtR7B8ECC)
 
